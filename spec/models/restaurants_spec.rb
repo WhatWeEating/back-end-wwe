@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe Restaurants do
+RSpec.describe Restaurant do
   describe 'relationships' do
-    it { should belong_to :events }
+    it { should belong_to :event }
   end
 
   describe 'validations' do

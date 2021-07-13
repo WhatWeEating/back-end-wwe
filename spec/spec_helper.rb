@@ -13,6 +13,7 @@
 # it.
 require 'simplecov'
 SimpleCov.start
+SimpleCov.add_filter ['spec', 'config', 'mailers', 'channels', 'jobs']
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
