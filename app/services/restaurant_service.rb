@@ -1,7 +1,7 @@
 class RestaurantService
   class << self
     def fetch_open_restaurants(zip)
-      resp = conn.get("/businesses/search") do |faraday|
+      resp = conn.get("/v3/businesses/search") do |faraday|
         faraday.params["location"] = zip
         faraday.params["categories"] = "restaurant"
         faraday.params["limit"] = 15
@@ -13,7 +13,7 @@ class RestaurantService
     private
 
     def conn
-      Faraday.new(url: 'https://api.yelp.com/v3') do |faraday|
+      Faraday.new(url: 'https://api.yelp.com') do |faraday|
         faraday.headers['Authorization'] = "Bearer #{ENV['FOOD_KEY']}"
       end
     end
