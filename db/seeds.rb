@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+event = Event.create(uid: Faker::FunnyName.name)
+
+event.restaurants.create(yelp_id: Faker::Games::Pokemon.name, votes: 3)
+event.restaurants.create(yelp_id: Faker::Games::Pokemon.name, votes: 2)
+event.restaurants.create(yelp_id: Faker::Games::Pokemon.name, votes: 1)
