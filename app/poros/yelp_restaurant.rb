@@ -6,7 +6,7 @@ class YelpRestaurant
               :price,
               :address,
               :phone
-  
+
   def initialize(info)
     @id = info[:id]
     @name = info[:name]
