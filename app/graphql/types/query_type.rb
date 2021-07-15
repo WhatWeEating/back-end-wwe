@@ -8,10 +8,12 @@ module Types
     # They will be entry points for queries on your schema.
 
     # TODO: remove me
-    field :test_field, String, null: false,
-      description: "An example field added by the generator"
-    def test_field
-      "Hello World!"
+    field :event, [Types::EventType], null: false,
+      description: "Returns an event by ID"
+    argument :id, ID, required: true ## TODO: fully implement that it takes argument
+    def event(id)
+      binding.pry
+      Event.all
     end
   end
 end
