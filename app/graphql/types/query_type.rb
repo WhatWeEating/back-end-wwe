@@ -6,14 +6,12 @@ module Types
 
     # Add root-level fields here.
     # They will be entry points for queries on your schema.
-
+    field :fetch_event, resolver: Queries::FetchEvent #tells what query field and where it is defined
     # TODO: remove me
-    field :event, [Types::EventType], null: false,
-      description: "Returns an event by ID"
-    argument :id, ID, required: true ## TODO: fully implement that it takes argument
-    def event(id)
-      binding.pry
-      Event.all
-    end
+    # field :event, [Types::EventType], null: false,
+    #   description: "Returns an event by ID"
+    # def event
+    #   Event.all
+    # end  ## Discuss with Diana about whether to delete this
   end
 end
