@@ -3,5 +3,5 @@ class Restaurant < ApplicationRecord
 
   validates :yelp_id, presence: true, uniqueness: true
   validates :event_id, presence: true
-  validates :votes, presence: true, numericality: true
+  validates :votes, numericality: true
 end
