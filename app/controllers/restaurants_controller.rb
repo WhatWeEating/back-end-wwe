@@ -14,10 +14,10 @@ class RestaurantsController < ApplicationController
 
   def valid?
     zip = params[:zip]
-    if zip.nil? || zip.size != 5
-      invalid_params
-    else zip.length == 5 && zip.to_i > 0
-      return true
-    end
+
+    return true if zip.present? &&
+      zip.length == 5 &&
+      zip.to_i > 0
+    invalid_params
   end
 end
