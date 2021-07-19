@@ -29,7 +29,7 @@ module BackEndWwe
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins 'http://localhost:3000'#, 'https://back-end-wwe.herokuapp.com/' TODO: replace with FE heroku url
+        origins 'http://localhost:3000', 'https://back-end-wwe.herokuapp.com/'
         resource '*', :headers => :any, :methods => [:get, :post]
       end
     end
