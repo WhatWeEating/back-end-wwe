@@ -1,10 +1,10 @@
 module Queries
   class FetchEvent < Queries::BaseQuery  ## named FetchEvent because Event is already a model so this was less confusing
     type Types::EventType, null: false
-    argument :id, ID, required: true
+    argument :uid, String, required: true
 
-    def resolve(id:)
-      Event.find(id)
+    def resolve(uid:)
+      Event.find_by(uid: uid)
     rescue ActiveRecord::RecordNotFound => _e
       GraphQL::ExecutionError.new('Event does not exist.')
     rescue ActiveRecord::RecordInvalid => e
