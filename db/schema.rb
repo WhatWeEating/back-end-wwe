@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_19_215243) do
+ActiveRecord::Schema.define(version: 2021_07_19_222212) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,9 @@ ActiveRecord::Schema.define(version: 2021_07_19_215243) do
     t.integer "votes", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image"
+    t.string "phone"
+    t.string "address"
     t.index ["event_id"], name: "index_restaurants_on_event_id"
     t.index ["yelp_id"], name: "index_restaurants_on_yelp_id", unique: true
   end
