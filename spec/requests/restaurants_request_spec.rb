@@ -42,4 +42,30 @@ RSpec.describe 'Fetch Open Restaurants by Zip' do
       expect(attributes[:phone]).to be_a(String)
     end
   end
+
+  describe 'Sad Path' do
+    it 'requires zip query parameter' do
+      get "/restaurants"
+
+      body = JSON.parse(response.body, symbolize_names: true)
+
+      expect(body).to have_key(:message)
+      expect(body[:message]).to eq("Oh no! Your request cannot be completed.")
+      expect(body).to have_key(:error)
+      expect(body[:error]).to eq("Parameter requirement")
+      expect(response.status).to eq(400)
+    end
+
+    it 'zip must be a string of 5 numbers' do
+      get "/restaurants?zip=ck-23-1"
+
+      body = JSON.parse(response.body, symbolize_names: true)
+
+      expect(body).to have_key(:message)
+      expect(body[:message]).to eq("Oh no! Your request cannot be completed.")
+      expect(body).to have_key(:error)
+      expect(body[:error]).to eq("Parameter requirement")
+      expect(response.status).to eq(400)
+    end
+  end
 end
