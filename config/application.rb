@@ -29,14 +29,14 @@ module BackEndWwe
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins 'http://localhost:3000', 'https://back-end-wwe.herokuapp.com/'
-        # origins '*'
+        # origins 'http://localhost:3000', 'https://back-end-wwe.herokuapp.com/'
+        origins '*'
         resource '*', :headers => :any, :methods => [:get, :post]
       end
-      allow do
-        origins 'https://mysterious-cove-94790.herokuapp.com/'
-        resource '*', :headers => :any, :methods => [:get, :post]
-      end
+      # allow do
+      #   origins 'https://mysterious-cove-94790.herokuapp.com/'
+      #   resource '*', :headers => :any, :methods => [:get, :post]
+      # end
     end
 
     # Only loads a smaller set of middleware suitable for API only apps.
