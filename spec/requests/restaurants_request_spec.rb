@@ -41,6 +41,16 @@ RSpec.describe 'Fetch Open Restaurants by Zip' do
       expect(attributes).to have_key(:phone)
       expect(attributes[:phone]).to be_a(String)
     end
+
+    it 'creates event with event ID from header' do
+      headers = { "event_id" => "123456789" }
+      get '/restaurants', params: { zip: "23452" }, headers: headers
+
+      event = Event.last
+
+      expect(response).to be_successful
+      expect(event.uid).to eq(headers["event_id"])
+    end
   end
 
   describe 'Sad Path' do
