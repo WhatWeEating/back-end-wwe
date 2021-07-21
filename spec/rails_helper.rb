@@ -75,4 +75,5 @@ VCR.configure do |config|
   config.hook_into :webmock
   config.filter_sensitive_data('FOOD_KEY') { ENV['FOOD_KEY'] }
   config.configure_rspec_metadata!
+  config.allow_http_connections_when_no_cassette = true
 end
