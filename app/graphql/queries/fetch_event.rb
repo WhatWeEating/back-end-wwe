@@ -1,5 +1,5 @@
 module Queries
-  class FetchEvent < Queries::BaseQuery  ## named FetchEvent because Event is already a model so this was less confusing
+  class FetchEvent < Queries::BaseQuery  
     type Types::EventType, null: false
     argument :uid, String, required: true
 
