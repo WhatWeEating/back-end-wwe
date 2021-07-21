@@ -2,7 +2,7 @@ module Mutations
   class CreateRestaurants < Mutations::BaseMutation
     argument :params, Types::Input::RestaurantInputType, required: true
 
-    field :restaurant, Types::RestaurantType, null: false
+    field :restaurant, Types::RestaurantType, null: true
     field :errors, [String], null: false
     # argument :event_id, String, required: true
 
