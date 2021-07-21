@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Mutations::CreateRestaurant, type: :request do
+RSpec.describe Mutations::CreateRestaurants, type: :request do
   # describe '.resolve' do
 #     it 'creates restaurants' do
 #       expect(Restaurant.count).to eq(0)

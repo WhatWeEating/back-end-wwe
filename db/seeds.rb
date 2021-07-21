@@ -8,21 +8,24 @@
 2.times do
   event = Event.create(uid: Faker::FunnyName.name)
 
-  event.restaurants.create(yelp_id: Faker::Games::Pokemon.name, 
+  event.restaurants.create(yelp_id: Faker::Games::Pokemon.name,
     phone: Faker::PhoneNumber.cell_phone,
-    address: Faker::Address.full_address, 
-    image: Faker::Avatar.image, 
-    votes: 3)
+    address: Faker::Address.full_address,
+    image: Faker::Avatar.image,
+    votes: 3,
+    name: Faker::JapaneseMedia::StudioGhibli.character)
 
-  event.restaurants.create(yelp_id: Faker::Games::Pokemon.name, 
+  event.restaurants.create(yelp_id: Faker::Games::Pokemon.name,
     phone: Faker::PhoneNumber.cell_phone,
-    address: Faker::Address.full_address, 
-    image: Faker::Avatar.image, 
-    votes: 2)
+    address: Faker::Address.full_address,
+    image: Faker::Avatar.image,
+    votes: 2,
+    name: Faker::JapaneseMedia::StudioGhibli.character)
 
-  event.restaurants.create(yelp_id: Faker::Games::Pokemon.name, 
+  event.restaurants.create(yelp_id: Faker::Games::Pokemon.name,
     phone: Faker::PhoneNumber.cell_phone,
-    address: Faker::Address.full_address, 
-    image: Faker::Avatar.image, 
-    votes: 1)
+    address: Faker::Address.full_address,
+    image: Faker::Avatar.image,
+    votes: 1,
+    name: Faker::JapaneseMedia::StudioGhibli.character)
 end
