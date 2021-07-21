@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Fetch Open Restaurants by Zip' do
+RSpec.describe 'Fetch Open Restaurants by Zip', :vcr do
   describe 'Happy Path' do
     it 'endpoint exists and returns array of restaurants' do
       zip = 22304

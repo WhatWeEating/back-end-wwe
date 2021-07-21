@@ -1,0 +1,221 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/search?categories=restaurant&limit=15&location=22304&open_now=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer FOOD_KEY
+      User-Agent:
+      - Faraday v1.4.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Ratelimit-Dailylimit:
+      - '5000'
+      Ratelimit-Remaining:
+      - '4766'
+      Ratelimit-Resettime:
+      - '2021-07-22T00:00:00+00:00'
+      X-Routing-Service:
+      - routing-canary--useast1-7b97b998d7-dcmwp; site=public_api_v3
+      Server:
+      - envoy
+      X-Cloudmap:
+      - routing_useast1
+      X-Proxied:
+      - 10-65-171-158-useast1bprod
+      X-Extlb:
+      - 10-65-171-158-useast1bprod
+      Cache-Control:
+      - max-age=0, no-store, private, no-transform
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Wed, 21 Jul 2021 18:36:44 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-wdc5545-WDC
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"businesses": [{"id": "avHzmFsepOW64xM9l9IWXw", "alias": "fratelli-alexandria-2",
+        "name": "Fratelli ", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/MW_Nm5nELHaz5eK6QH4uxw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/fratelli-alexandria-2?adjust_creative=LQcpiiWbMiKa340WkEG_8A&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=LQcpiiWbMiKa340WkEG_8A",
+        "review_count": 428, "categories": [{"alias": "italian", "title": "Italian"}],
+        "rating": 4.5, "coordinates": {"latitude": 38.808784, "longitude": -77.1326374},
+        "transactions": ["delivery"], "price": "$$", "location": {"address1": "410
+        S Van Dorn St", "address2": null, "address3": "", "city": "Alexandria", "zip_code":
+        "22304", "country": "US", "state": "VA", "display_address": ["410 S Van Dorn
+        St", "Alexandria, VA 22304"]}, "phone": "+17032129122", "display_phone": "(703)
+        212-9122", "distance": 1527.5079074502717}, {"id": "dOKnbP1TjZx_3XB6_VYHgg",
+        "alias": "carlyle-arlington", "name": "Carlyle", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/Yv96FC-hv2XZhovSzYJbtA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/carlyle-arlington?adjust_creative=LQcpiiWbMiKa340WkEG_8A&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=LQcpiiWbMiKa340WkEG_8A",
+        "review_count": 1431, "categories": [{"alias": "newamerican", "title": "American
+        (New)"}, {"alias": "sandwiches", "title": "Sandwiches"}, {"alias": "wine_bars",
+        "title": "Wine Bars"}], "rating": 4.0, "coordinates": {"latitude": 38.8406,
+        "longitude": -77.08702}, "transactions": ["pickup", "delivery"], "price":
+        "$$", "location": {"address1": "4000 Campbell Ave", "address2": "", "address3":
+        "", "city": "Arlington", "zip_code": "22206", "country": "US", "state": "VA",
+        "display_address": ["4000 Campbell Ave", "Arlington, VA 22206"]}, "phone":
+        "+17039310777", "display_phone": "(703) 931-0777", "distance": 3837.4245334881357},
+        {"id": "xREl51IJyuasOY7btHICKw", "alias": "palette-22-arlington", "name":
+        "Palette 22", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/av3GlBa2285Ufcnyr_Wz1w/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/palette-22-arlington?adjust_creative=LQcpiiWbMiKa340WkEG_8A&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=LQcpiiWbMiKa340WkEG_8A",
+        "review_count": 1224, "categories": [{"alias": "bars", "title": "Bars"}, {"alias":
+        "breakfast_brunch", "title": "Breakfast & Brunch"}, {"alias": "tapasmallplates",
+        "title": "Tapas/Small Plates"}], "rating": 4.0, "coordinates": {"latitude":
+        38.8411567076913, "longitude": -77.088503278792}, "transactions": ["pickup",
+        "delivery"], "price": "$$", "location": {"address1": "4053 Campbell Ave",
+        "address2": "", "address3": "", "city": "Arlington", "zip_code": "22206",
+        "country": "US", "state": "VA", "display_address": ["4053 Campbell Ave", "Arlington,
+        VA 22206"]}, "phone": "+17037469007", "display_phone": "(703) 746-9007", "distance":
+        3793.488405055683}, {"id": "hz5gq1p4n4SenMWfEOFSMA", "alias": "pho-factory-alexandria",
+        "name": "Pho Factory", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/V8yMwBmXG7z8cseheTae6A/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/pho-factory-alexandria?adjust_creative=LQcpiiWbMiKa340WkEG_8A&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=LQcpiiWbMiKa340WkEG_8A",
+        "review_count": 439, "categories": [{"alias": "vietnamese", "title": "Vietnamese"}],
+        "rating": 4.5, "coordinates": {"latitude": 38.8164050820035, "longitude":
+        -77.1429807535812}, "transactions": ["delivery"], "price": "$", "location":
+        {"address1": "6237 Little River Tpke", "address2": "", "address3": "", "city":
+        "Alexandria", "zip_code": "22312", "country": "US", "state": "VA", "display_address":
+        ["6237 Little River Tpke", "Alexandria, VA 22312"]}, "phone": "+17036420101",
+        "display_phone": "(703) 642-0101", "distance": 2240.377254232434}, {"id":
+        "09_hd7gqcjLxE1qwcTm4nA", "alias": "fat-city-kitchen-alexandria", "name":
+        "Fat City Kitchen", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/RGjpjsS69DvL_FDWuVNzlQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/fat-city-kitchen-alexandria?adjust_creative=LQcpiiWbMiKa340WkEG_8A&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=LQcpiiWbMiKa340WkEG_8A",
+        "review_count": 446, "categories": [{"alias": "tradamerican", "title": "American
+        (Traditional)"}, {"alias": "pizza", "title": "Pizza"}, {"alias": "bars", "title":
+        "Bars"}], "rating": 4.0, "coordinates": {"latitude": 38.80798712139982, "longitude":
+        -77.12370416649716}, "transactions": ["delivery"], "price": "$$", "location":
+        {"address1": "330 S Pickett St", "address2": "", "address3": "", "city": "Alexandria",
+        "zip_code": "22304", "country": "US", "state": "VA", "display_address": ["330
+        S Pickett St", "Alexandria, VA 22304"]}, "phone": "+17036859172", "display_phone":
+        "(703) 685-9172", "distance": 996.7113874660224}, {"id": "xZW9bDIGJU0nDxLlKAuwBg",
+        "alias": "best-buns-bread-arlington", "name": "Best Buns Bread", "image_url":
+        "https://s3-media4.fl.yelpcdn.com/bphoto/GL9P8mMNrmFrgjINkIkTcA/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/best-buns-bread-arlington?adjust_creative=LQcpiiWbMiKa340WkEG_8A&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=LQcpiiWbMiKa340WkEG_8A",
+        "review_count": 654, "categories": [{"alias": "bakeries", "title": "Bakeries"}],
+        "rating": 4.5, "coordinates": {"latitude": 38.84062, "longitude": -77.08721},
+        "transactions": ["pickup", "delivery"], "price": "$", "location": {"address1":
+        "4010 Campbell Ave", "address2": "", "address3": "", "city": "Arlington",
+        "zip_code": "22206", "country": "US", "state": "VA", "display_address": ["4010
+        Campbell Ave", "Arlington, VA 22206"]}, "phone": "+17035781500", "display_phone":
+        "(703) 578-1500", "distance": 3821.930464815559}, {"id": "ZORmIIKt6UmITGq-r5FHyA",
+        "alias": "busboys-and-poets-shirlington-arlington-2", "name": "Busboys and
+        Poets - Shirlington", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/poiHlrDbfM56fjyzg2zCgg/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/busboys-and-poets-shirlington-arlington-2?adjust_creative=LQcpiiWbMiKa340WkEG_8A&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=LQcpiiWbMiKa340WkEG_8A",
+        "review_count": 1521, "categories": [{"alias": "tradamerican", "title": "American
+        (Traditional)"}, {"alias": "mediterranean", "title": "Mediterranean"}, {"alias":
+        "breakfast_brunch", "title": "Breakfast & Brunch"}], "rating": 4.0, "coordinates":
+        {"latitude": 38.84130854456756, "longitude": -77.08951887055221}, "transactions":
+        ["pickup", "delivery"], "price": "$$", "location": {"address1": "4251 S Campbell
+        Ave", "address2": "", "address3": "", "city": "Arlington", "zip_code": "22206",
+        "country": "US", "state": "VA", "display_address": ["4251 S Campbell Ave",
+        "Arlington, VA 22206"]}, "phone": "+17033799757", "display_phone": "(703)
+        379-9757", "distance": 3749.4950033859745}, {"id": "JK6WGzNLf9V3sqcQua06Dg",
+        "alias": "java-loco-van-dorn-alexandria", "name": "Java Loco - Van Dorn",
+        "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/BlHLJz2q4I2TyT7qejewDA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/java-loco-van-dorn-alexandria?adjust_creative=LQcpiiWbMiKa340WkEG_8A&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=LQcpiiWbMiKa340WkEG_8A",
+        "review_count": 309, "categories": [{"alias": "coffee", "title": "Coffee &
+        Tea"}, {"alias": "gelato", "title": "Gelato"}, {"alias": "bubbletea", "title":
+        "Bubble Tea"}], "rating": 4.0, "coordinates": {"latitude": 38.8106186, "longitude":
+        -77.1324435}, "transactions": ["pickup", "delivery"], "price": "$", "location":
+        {"address1": "289 S Van Dorn St", "address2": "", "address3": "", "city":
+        "Alexandria", "zip_code": "22304", "country": "US", "state": "VA", "display_address":
+        ["289 S Van Dorn St", "Alexandria, VA 22304"]}, "phone": "+17035665711", "display_phone":
+        "(703) 566-5711", "distance": 1522.5448526841383}, {"id": "RsBty1bREe-J7vdU6UyEzw",
+        "alias": "mediterranean-bakery-and-cafe-alexandria", "name": "Mediterranean
+        Bakery & Cafe", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/xTWQ3mNrPdQxGtZTlin1TQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/mediterranean-bakery-and-cafe-alexandria?adjust_creative=LQcpiiWbMiKa340WkEG_8A&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=LQcpiiWbMiKa340WkEG_8A",
+        "review_count": 251, "categories": [{"alias": "bakeries", "title": "Bakeries"},
+        {"alias": "mediterranean", "title": "Mediterranean"}], "rating": 4.0, "coordinates":
+        {"latitude": 38.8074101340125, "longitude": -77.1240799341156}, "transactions":
+        ["delivery"], "price": "$", "location": {"address1": "352 S Pickett St", "address2":
+        "", "address3": "", "city": "Alexandria", "zip_code": "22304", "country":
+        "US", "state": "VA", "display_address": ["352 S Pickett St", "Alexandria,
+        VA 22304"]}, "phone": "+17037510030", "display_phone": "(703) 751-0030", "distance":
+        1068.0405371937877}, {"id": "pW31vW_mILrCRY72v79KMQ", "alias": "peking-gourmet-inn-falls-church",
+        "name": "Peking Gourmet Inn", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/PnApjKlgH7edDEg8OPromA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/peking-gourmet-inn-falls-church?adjust_creative=LQcpiiWbMiKa340WkEG_8A&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=LQcpiiWbMiKa340WkEG_8A",
+        "review_count": 2269, "categories": [{"alias": "chinese", "title": "Chinese"}],
+        "rating": 4.0, "coordinates": {"latitude": 38.8553493857457, "longitude":
+        -77.1395403227539}, "transactions": ["delivery"], "price": "$$", "location":
+        {"address1": "6029 Leesburg Pike", "address2": "", "address3": "", "city":
+        "Falls Church", "zip_code": "22041", "country": "US", "state": "VA", "display_address":
+        ["6029 Leesburg Pike", "Falls Church, VA 22041"]}, "phone": "+17036718088",
+        "display_phone": "(703) 671-8088", "distance": 4851.152872843228}, {"id":
+        "kqfUX9gH0rHEIfOLREDOuA", "alias": "taste-of-asia-alexandria", "name": "Taste
+        of Asia", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/ezF1f8lvlYamLcHt8insew/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/taste-of-asia-alexandria?adjust_creative=LQcpiiWbMiKa340WkEG_8A&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=LQcpiiWbMiKa340WkEG_8A",
+        "review_count": 267, "categories": [{"alias": "chinese", "title": "Chinese"},
+        {"alias": "japanese", "title": "Japanese"}, {"alias": "thai", "title": "Thai"}],
+        "rating": 4.0, "coordinates": {"latitude": 38.8075635358086, "longitude":
+        -77.12491755267}, "transactions": ["pickup", "delivery"], "price": "$$", "location":
+        {"address1": "362 S Pickett St", "address2": "", "address3": "", "city": "Alexandria",
+        "zip_code": "22304", "country": "US", "state": "VA", "display_address": ["362
+        S Pickett St", "Alexandria, VA 22304"]}, "phone": "+17033701873", "display_phone":
+        "(703) 370-1873", "distance": 1096.898732658959}, {"id": "LQ2v5faVyH0X0NNyibtllw",
+        "alias": "smoking-kow-bbq-alexandria-alexandria", "name": "Smoking Kow BBQ
+        - Alexandria", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/bVpV6TypLLpUe62u0jpl1Q/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/smoking-kow-bbq-alexandria-alexandria?adjust_creative=LQcpiiWbMiKa340WkEG_8A&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=LQcpiiWbMiKa340WkEG_8A",
+        "review_count": 342, "categories": [{"alias": "bbq", "title": "Barbeque"}],
+        "rating": 4.5, "coordinates": {"latitude": 38.807972742083, "longitude": -77.0868041790237},
+        "transactions": ["pickup", "delivery"], "price": "$$", "location": {"address1":
+        "3250 Duke St", "address2": "", "address3": null, "city": "Alexandria", "zip_code":
+        "22314", "country": "US", "state": "VA", "display_address": ["3250 Duke St",
+        "Alexandria, VA 22314"]}, "phone": "+17038882649", "display_phone": "(703)
+        888-2649", "distance": 2755.1027659885826}, {"id": "m2Q1qbD3pu_vGLhBAC8hiw",
+        "alias": "pho-viet-flare-alexandria", "name": "Pho Viet Flare", "image_url":
+        "https://s3-media1.fl.yelpcdn.com/bphoto/jHLWw_chqqVmzVmRDxWnww/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/pho-viet-flare-alexandria?adjust_creative=LQcpiiWbMiKa340WkEG_8A&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=LQcpiiWbMiKa340WkEG_8A",
+        "review_count": 333, "categories": [{"alias": "vietnamese", "title": "Vietnamese"},
+        {"alias": "bubbletea", "title": "Bubble Tea"}], "rating": 4.0, "coordinates":
+        {"latitude": 38.80592, "longitude": -77.13298}, "transactions": ["delivery"],
+        "price": "$", "location": {"address1": "514 S Van Dorn St", "address2": "Ste
+        B", "address3": "", "city": "Alexandria", "zip_code": "22304", "country":
+        "US", "state": "VA", "display_address": ["514 S Van Dorn St", "Ste B", "Alexandria,
+        VA 22304"]}, "phone": "+17033709279", "display_phone": "(703) 370-9279", "distance":
+        1722.5068346117437}, {"id": "YzwZvv5NBV5SM4t9RsXkMA", "alias": "shooter-mcgees-alexandria",
+        "name": "Shooter McGee''s", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/4Pt2iTW4-fpWQX6OBMl2Bw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/shooter-mcgees-alexandria?adjust_creative=LQcpiiWbMiKa340WkEG_8A&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=LQcpiiWbMiKa340WkEG_8A",
+        "review_count": 342, "categories": [{"alias": "bars", "title": "Bars"}, {"alias":
+        "burgers", "title": "Burgers"}, {"alias": "comfortfood", "title": "Comfort
+        Food"}], "rating": 3.5, "coordinates": {"latitude": 38.8130922424795, "longitude":
+        -77.1227110067459}, "transactions": ["delivery"], "price": "$$", "location":
+        {"address1": "5239 Duke St", "address2": "", "address3": "", "city": "Alexandria",
+        "zip_code": "22304", "country": "US", "state": "VA", "display_address": ["5239
+        Duke St", "Alexandria, VA 22304"]}, "phone": "+17037519266", "display_phone":
+        "(703) 751-9266", "distance": 543.1367887812696}, {"id": "n_97tVbPby5vDKrAMSQyIw",
+        "alias": "indaroma-alexandria-3", "name": "IndAroma", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/NI197XMZd2ZMUzgLSJwIDA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/indaroma-alexandria-3?adjust_creative=LQcpiiWbMiKa340WkEG_8A&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=LQcpiiWbMiKa340WkEG_8A",
+        "review_count": 651, "categories": [{"alias": "indpak", "title": "Indian"}],
+        "rating": 4.0, "coordinates": {"latitude": 38.822744, "longitude": -77.160803},
+        "transactions": ["pickup", "delivery"], "price": "$$", "location": {"address1":
+        "6548C Little River Tpke", "address2": "", "address3": "", "city": "Alexandria",
+        "zip_code": "22312", "country": "US", "state": "VA", "display_address": ["6548C
+        Little River Tpke", "Alexandria, VA 22312"]}, "phone": "+17033541812", "display_phone":
+        "(703) 354-1812", "distance": 3869.4576111460933}], "total": 2000, "region":
+        {"center": {"longitude": -77.11715698242188, "latitude": 38.81535735707456}}}'
+  recorded_at: Wed, 21 Jul 2021 18:36:44 GMT
+recorded_with: VCR 6.0.0
