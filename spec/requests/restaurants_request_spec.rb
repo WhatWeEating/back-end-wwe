@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Fetch Open Restaurants by Zip' do
   describe 'Happy Path' do
-    xit 'endpoint exists and returns array of restaurants' do
+    it 'endpoint exists and returns array of restaurants' do
       zip = 22304
 
       get "/restaurants?zip=#{zip}"
@@ -42,14 +42,14 @@ RSpec.describe 'Fetch Open Restaurants by Zip' do
       expect(attributes[:phone]).to be_a(String)
     end
 
-    xit 'creates event with event ID from header' do
-      headers = { "event_id" => "123456789" }
+    it 'creates event with event ID from header' do
+      headers = { :HTTP_EVENT_ID => "123456789" }
       get '/restaurants', params: { zip: "23452" }, headers: headers
 
       event = Event.last
 
       expect(response).to be_successful
-      expect(event.uid).to eq(headers["event_id"])
+      expect(event.uid).to eq(headers[:HTTP_EVENT_ID])
     end
   end
 
