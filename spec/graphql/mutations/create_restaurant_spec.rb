@@ -1,34 +1,38 @@
 require 'rails_helper'
 
 RSpec.describe Mutations::CreateRestaurants, type: :request do
-  # describe '.resolve' do
-#     it 'creates restaurants' do
-#       expect(Restaurant.count).to eq(0)
-#       post '/graphql', params: { query: query }
-#       expect(Restaurant.count).to eq(3)
-#     end
-#
-#     it 'returns a restaurant' do
-#       post '/graphql', params: { query: query }
-#       response = JSON.parse(response.body)
-#       data = response['data']
-#       # expect(data['restaurant']['name']).to eq() # let FE know this is not in their mock data
-#       expect(data['restaurant']['event_id']).to eq()
-#       expect(data['restaurant']['vote']).to eq()
-#       expect(data['restaurant']['address']).to eq()
-#       expect(data['restaurant']['phone']).to eq()
-#     end
-#   end
-#
-#   def query # test is still not working!
-#     <<~GQL
-#     mutation {
-#   createRestaurant(input: {eventId: "Joe King", yelpId: "1a2b3c4d567j89z", image:"urlhere", address: "123 st", phone:"405648"}) {
-#     restaurant {
-#       id
-#     }
-#   }
-# }
-#       GQL
-#   end
+  describe '.resolve' do
+    it 'creates restaurants' do
+      event = Event.create(uid: "Kareem O'Weet")
+      expect(Restaurant.count).to eq(0)
+      post '/graphql', params: { query: query }
+      expect(Restaurant.count).to eq(3)
+    end
+  end 
+
+  def query
+    <<~GQL
+    mutation {
+      createRestaurants(input: {
+        params: {
+          first: {
+            eventId: "Kareem O'Weet", yelpId: "00000", image: "website", address: "123 st", phone: "405648", name: "Cool Food"
+          },
+          second: {
+            eventId: "Kareem O'Weet", yelpId: "1235460", image: "webpage", address: "123 st", phone: "405648", name: "Spicy Food"
+          },
+          third:{
+            eventId: "Kareem O'Weet", yelpId: "60870asdf", image: "imageaddress", address: "123 st", phone: "405648", name: "Comfort Food"
+          }
+          }}) {
+    restaurant {
+      name
+    	phone
+      address
+
+    }
+  }
+}
+      GQL
+  end
 end

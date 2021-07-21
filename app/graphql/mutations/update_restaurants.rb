@@ -2,7 +2,7 @@ module Mutations
   class UpdateRestaurants < Mutations::BaseMutation
     argument :params, Types::Input::RestaurantInputType, required: true
 
-    field :restaurant, Types::RestaurantType, null: true
+    field :restaurant, [Types::RestaurantType], null: true
     field :errors, [String], null: true
 
     def resolve(params:)
@@ -12,7 +12,7 @@ module Mutations
       first = Restaurant.where(event: event, yelp_id: restaurant_params[:first][:yelp_id]).first
       second = Restaurant.where(event: event, yelp_id: restaurant_params[:second][:yelp_id]).first
       third = Restaurant.where(event: event, yelp_id: restaurant_params[:third][:yelp_id]).first
-
+      # binding.pry
       first.votes = first.votes +=3
       second.votes = second.votes +=2
       third.votes = third.votes +=1
@@ -21,7 +21,17 @@ module Mutations
       second.save
       third.save
 
-      restaurant_params[:first]
+      restaurants = [first, second, third]
+
+      if restaurants.present?
+        {
+          restaurant: restaurants,
+          error: []
+        } else {
+          restaurants: [],
+          errors: restaurant.errors.full_messages
+        }
+      end
     end
   end
 end

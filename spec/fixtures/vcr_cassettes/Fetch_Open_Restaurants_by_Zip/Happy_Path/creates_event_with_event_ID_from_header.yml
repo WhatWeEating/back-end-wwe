@@ -1,0 +1,225 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/search?categories=restaurant&limit=15&location=23452&open_now=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer FOOD_KEY
+      User-Agent:
+      - Faraday v1.4.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Ratelimit-Resettime:
+      - '2021-07-22T00:00:00+00:00'
+      X-Routing-Service:
+      - routing-main--useast1-c6fb56896-2tn5k; site=public_api_v3
+      Server:
+      - envoy
+      Ratelimit-Remaining:
+      - '4765'
+      Ratelimit-Dailylimit:
+      - '5000'
+      X-Cloudmap:
+      - routing_useast1
+      X-Proxied:
+      - 10-65-171-158-useast1bprod
+      X-Extlb:
+      - 10-65-171-158-useast1bprod
+      Cache-Control:
+      - max-age=0, no-store, private, no-transform
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Wed, 21 Jul 2021 18:36:45 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-wdc5556-WDC
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"businesses": [{"id": "AKqb9TR9QdzJ1qdu8tkTzA", "alias": "hair-of-the-dog-eatery-virginia-beach-2",
+        "name": "Hair of the Dog Eatery", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/gwaFPzFHysAIJ6e5YC2exQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/hair-of-the-dog-eatery-virginia-beach-2?adjust_creative=LQcpiiWbMiKa340WkEG_8A&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=LQcpiiWbMiKa340WkEG_8A",
+        "review_count": 879, "categories": [{"alias": "tradamerican", "title": "American
+        (Traditional)"}], "rating": 4.0, "coordinates": {"latitude": 36.8427236690082,
+        "longitude": -76.1146234298266}, "transactions": ["delivery", "pickup"], "price":
+        "$$", "location": {"address1": "4000 Virginia Beach Blvd", "address2": "Ste
+        210", "address3": "", "city": "Virginia Beach", "zip_code": "23452", "country":
+        "US", "state": "VA", "display_address": ["4000 Virginia Beach Blvd", "Ste
+        210", "Virginia Beach, VA 23452"]}, "phone": "+17573212200", "display_phone":
+        "(757) 321-2200", "distance": 1693.9970493730857}, {"id": "BfRDJuCXGJTYspHHgEN4zg",
+        "alias": "mazari-kebab-and-more-virginia-beach", "name": "Mazari Kebab and
+        More", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/O8HcqBaWHv_oHQ5U5wk6IA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/mazari-kebab-and-more-virginia-beach?adjust_creative=LQcpiiWbMiKa340WkEG_8A&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=LQcpiiWbMiKa340WkEG_8A",
+        "review_count": 581, "categories": [{"alias": "mideastern", "title": "Middle
+        Eastern"}, {"alias": "mediterranean", "title": "Mediterranean"}], "rating":
+        4.5, "coordinates": {"latitude": 36.8567585, "longitude": -76.1461033}, "transactions":
+        ["delivery", "pickup"], "price": "$$", "location": {"address1": "676 N Witchduck
+        Rd", "address2": null, "address3": "", "city": "Virginia Beach", "zip_code":
+        "23462", "country": "US", "state": "VA", "display_address": ["676 N Witchduck
+        Rd", "Virginia Beach, VA 23462"]}, "phone": "+17579615968", "display_phone":
+        "(757) 961-5968", "distance": 4419.597549869548}, {"id": "HH0O-DJNF34-SMmhKkK-AA",
+        "alias": "the-route-58-delicatessen-virginia-beach", "name": "The Route 58
+        Delicatessen", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/SWhB05QOOBLuhk5Sw9uylw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/the-route-58-delicatessen-virginia-beach?adjust_creative=LQcpiiWbMiKa340WkEG_8A&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=LQcpiiWbMiKa340WkEG_8A",
+        "review_count": 581, "categories": [{"alias": "delis", "title": "Delis"}],
+        "rating": 4.5, "coordinates": {"latitude": 36.842586, "longitude": -76.112752},
+        "transactions": ["delivery"], "price": "$$", "location": {"address1": "4000
+        Virginia Beach Blvd", "address2": "Ste 156", "address3": "", "city": "Virginia
+        Beach", "zip_code": "23462", "country": "US", "state": "VA", "display_address":
+        ["4000 Virginia Beach Blvd", "Ste 156", "Virginia Beach, VA 23462"]}, "phone":
+        "+17572275868", "display_phone": "(757) 227-5868", "distance": 1553.1820476879911},
+        {"id": "oYqEegDAWkyN_hnee-pQKg", "alias": "duck-donuts-virginia-beach", "name":
+        "Duck Donuts", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/TiEliHa7CGl16ZE1L6fdUQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/duck-donuts-virginia-beach?adjust_creative=LQcpiiWbMiKa340WkEG_8A&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=LQcpiiWbMiKa340WkEG_8A",
+        "review_count": 401, "categories": [{"alias": "donuts", "title": "Donuts"},
+        {"alias": "breakfast_brunch", "title": "Breakfast & Brunch"}, {"alias": "coffee",
+        "title": "Coffee & Tea"}], "rating": 4.5, "coordinates": {"latitude": 36.8437564,
+        "longitude": -76.0779895708844}, "transactions": ["delivery"], "price": "$",
+        "location": {"address1": "3030 Virginia Beach Blvd", "address2": "", "address3":
+        "", "city": "Virginia Beach", "zip_code": "23452", "country": "US", "state":
+        "VA", "display_address": ["3030 Virginia Beach Blvd", "Virginia Beach, VA
+        23452"]}, "phone": "+17573516530", "display_phone": "(757) 351-6530", "distance":
+        1843.616255227617}, {"id": "io57fDJ64kJbMC50GQjACQ", "alias": "tupelo-honey-virginia-beach",
+        "name": "Tupelo Honey", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/Kww6TdfYRQvg8NivJ_aFPg/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/tupelo-honey-virginia-beach?adjust_creative=LQcpiiWbMiKa340WkEG_8A&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=LQcpiiWbMiKa340WkEG_8A",
+        "review_count": 1091, "categories": [{"alias": "southern", "title": "Southern"},
+        {"alias": "breakfast_brunch", "title": "Breakfast & Brunch"}, {"alias": "newamerican",
+        "title": "American (New)"}], "rating": 4.0, "coordinates": {"latitude": 36.8420451,
+        "longitude": -76.1313633}, "transactions": ["delivery", "pickup"], "price":
+        "$$", "location": {"address1": "4501 Main St", "address2": "", "address3":
+        "", "city": "Virginia Beach", "zip_code": "23462", "country": "US", "state":
+        "VA", "display_address": ["4501 Main St", "Virginia Beach, VA 23462"]}, "phone":
+        "+17572644808", "display_phone": "(757) 264-4808", "distance": 3129.3853825493275},
+        {"id": "X1nCeshAx9MYBScabeUx-Q", "alias": "judys-sichuan-cuisine-virginia-beach",
+        "name": "Judy''s Sichuan Cuisine", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/kyR_5sM_IO2azvnbkuu3eg/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/judys-sichuan-cuisine-virginia-beach?adjust_creative=LQcpiiWbMiKa340WkEG_8A&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=LQcpiiWbMiKa340WkEG_8A",
+        "review_count": 564, "categories": [{"alias": "szechuan", "title": "Szechuan"}],
+        "rating": 4.0, "coordinates": {"latitude": 36.845634, "longitude": -76.1308976},
+        "transactions": ["delivery"], "price": "$$", "location": {"address1": "328
+        Constitution Dr", "address2": "", "address3": "", "city": "Virginia Beach",
+        "zip_code": "23462", "country": "US", "state": "VA", "display_address": ["328
+        Constitution Dr", "Virginia Beach, VA 23462"]}, "phone": "+17574992815", "display_phone":
+        "(757) 499-2815", "distance": 2862.0097922630794}, {"id": "StvEodZYGzEmKnwxRIV6xQ",
+        "alias": "noodle-man-virginia-beach-3", "name": "Noodle Man", "image_url":
+        "https://s3-media2.fl.yelpcdn.com/bphoto/mn4GYnUpX7WrCsvVubIp9g/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/noodle-man-virginia-beach-3?adjust_creative=LQcpiiWbMiKa340WkEG_8A&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=LQcpiiWbMiKa340WkEG_8A",
+        "review_count": 469, "categories": [{"alias": "noodles", "title": "Noodles"}],
+        "rating": 4.5, "coordinates": {"latitude": 36.8717540031588, "longitude":
+        -76.1350917323442}, "transactions": ["delivery"], "price": "$$", "location":
+        {"address1": "1047 Independence Blvd", "address2": null, "address3": "", "city":
+        "Virginia Beach", "zip_code": "23455", "country": "US", "state": "VA", "display_address":
+        ["1047 Independence Blvd", "Virginia Beach, VA 23455"]}, "phone": "+17572229666",
+        "display_phone": "(757) 222-9666", "distance": 4170.332080804949}, {"id":
+        "GUPuNJjcBiHaOlO8RFX9nA", "alias": "yard-house-virginia-beach-3", "name":
+        "Yard House", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/7v5VLkVk2o6uNf-woUigDw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/yard-house-virginia-beach-3?adjust_creative=LQcpiiWbMiKa340WkEG_8A&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=LQcpiiWbMiKa340WkEG_8A",
+        "review_count": 924, "categories": [{"alias": "newamerican", "title": "American
+        (New)"}, {"alias": "vegetarian", "title": "Vegetarian"}, {"alias": "bars",
+        "title": "Bars"}], "rating": 4.0, "coordinates": {"latitude": 36.8416010318521,
+        "longitude": -76.1363188726741}, "transactions": ["delivery", "pickup"], "price":
+        "$$", "location": {"address1": "4549 Commerce St", "address2": "", "address3":
+        "", "city": "Virginia Beach", "zip_code": "23462", "country": "US", "state":
+        "VA", "display_address": ["4549 Commerce St", "Virginia Beach, VA 23462"]},
+        "phone": "+17574909273", "display_phone": "(757) 490-9273", "distance": 3561.4279503455186},
+        {"id": "BvZh1w4wbxWY4vH-VKktOg", "alias": "coopers-hawk-winery-and-restaurant-virginia-beach-virginia-beach-2",
+        "name": "Cooper''s Hawk Winery & Restaurant - Virginia Beach", "image_url":
+        "https://s3-media1.fl.yelpcdn.com/bphoto/5R-Vhm1AU3IgHbPUcbExfQ/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/coopers-hawk-winery-and-restaurant-virginia-beach-virginia-beach-2?adjust_creative=LQcpiiWbMiKa340WkEG_8A&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=LQcpiiWbMiKa340WkEG_8A",
+        "review_count": 374, "categories": [{"alias": "winetastingroom", "title":
+        "Wine Tasting Room"}, {"alias": "newamerican", "title": "American (New)"},
+        {"alias": "wine_bars", "title": "Wine Bars"}], "rating": 4.5, "coordinates":
+        {"latitude": 36.8166116245003, "longitude": -76.0682212493471}, "transactions":
+        [], "price": "$$", "location": {"address1": "733 Lynnhaven Mall Lp", "address2":
+        "", "address3": null, "city": "Virginia Beach", "zip_code": "23452", "country":
+        "US", "state": "VA", "display_address": ["733 Lynnhaven Mall Lp", "Virginia
+        Beach, VA 23452"]}, "phone": "+17572137777", "display_phone": "(757) 213-7777",
+        "distance": 4440.758510577658}, {"id": "5Xcp-ME3v6HD27wbZJgKWQ", "alias":
+        "mission-bbq-virginia-beach", "name": "Mission BBQ", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/oKnT8q82tmvFrXFUCaG94w/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/mission-bbq-virginia-beach?adjust_creative=LQcpiiWbMiKa340WkEG_8A&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=LQcpiiWbMiKa340WkEG_8A",
+        "review_count": 439, "categories": [{"alias": "bbq", "title": "Barbeque"},
+        {"alias": "sandwiches", "title": "Sandwiches"}], "rating": 4.5, "coordinates":
+        {"latitude": 36.838928, "longitude": -76.135716}, "transactions": ["delivery"],
+        "price": "$$", "location": {"address1": "116 S Independence Blvd", "address2":
+        "", "address3": "", "city": "Virginia Beach", "zip_code": "23462", "country":
+        "US", "state": "VA", "display_address": ["116 S Independence Blvd", "Virginia
+        Beach, VA 23462"]}, "phone": "+17574909050", "display_phone": "(757) 490-9050",
+        "distance": 3594.112787481523}, {"id": "FJnqxbaLPUtNqRvE9Bw6-Q", "alias":
+        "757-poke-virginia-beach", "name": "757 Poke''", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/nYmKFMjfnRl84-o4HptE0Q/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/757-poke-virginia-beach?adjust_creative=LQcpiiWbMiKa340WkEG_8A&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=LQcpiiWbMiKa340WkEG_8A",
+        "review_count": 269, "categories": [{"alias": "hawaiian", "title": "Hawaiian"},
+        {"alias": "sushi", "title": "Sushi Bars"}, {"alias": "raw_food", "title":
+        "Live/Raw Food"}], "rating": 4.5, "coordinates": {"latitude": 36.845219, "longitude":
+        -76.133736}, "transactions": ["delivery", "pickup"], "price": "$$", "location":
+        {"address1": "4554 Virginia Beach Blvd", "address2": "Ste 740", "address3":
+        "", "city": "Virginia Beach", "zip_code": "23462", "country": "US", "state":
+        "VA", "display_address": ["4554 Virginia Beach Blvd", "Ste 740", "Virginia
+        Beach, VA 23462"]}, "phone": "+17575004665", "display_phone": "(757) 500-4665",
+        "distance": 3258.1170994569766}, {"id": "okNJtrZxiJ7zfuqYKWR8yQ", "alias":
+        "my-vegan-sweet-tooth-virginia-beach", "name": "My Vegan Sweet Tooth", "image_url":
+        "https://s3-media1.fl.yelpcdn.com/bphoto/ap5QjHChWydYy-hr0ngrrQ/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/my-vegan-sweet-tooth-virginia-beach?adjust_creative=LQcpiiWbMiKa340WkEG_8A&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=LQcpiiWbMiKa340WkEG_8A",
+        "review_count": 165, "categories": [{"alias": "bakeries", "title": "Bakeries"}],
+        "rating": 4.5, "coordinates": {"latitude": 36.84108, "longitude": -76.11058},
+        "transactions": [], "price": "$$", "location": {"address1": "3916 Virginia
+        Beach Bvld", "address2": "", "address3": "", "city": "Virginia Beach", "zip_code":
+        "23452", "country": "US", "state": "VA", "display_address": ["3916 Virginia
+        Beach Bvld", "Virginia Beach, VA 23452"]}, "phone": "+17572794789", "display_phone":
+        "(757) 279-4789", "distance": 1482.4318212653588}, {"id": "pObj7dh2UMSpXMJF2xmNFw",
+        "alias": "bros-fish-tacos-virginia-beach-4", "name": "Bro''s Fish Tacos",
+        "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/rdz7t5i13VPZrAe8bpmrOA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/bros-fish-tacos-virginia-beach-4?adjust_creative=LQcpiiWbMiKa340WkEG_8A&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=LQcpiiWbMiKa340WkEG_8A",
+        "review_count": 190, "categories": [{"alias": "foodtrucks", "title": "Food
+        Trucks"}, {"alias": "mexican", "title": "Mexican"}, {"alias": "seafood", "title":
+        "Seafood"}], "rating": 4.5, "coordinates": {"latitude": 36.84308, "longitude":
+        -76.07137}, "transactions": ["delivery"], "price": "$", "location": {"address1":
+        "277 N Lynnhaven road", "address2": "Suite 116", "address3": "", "city": "Virginia
+        Beach", "zip_code": "23452", "country": "US", "state": "VA", "display_address":
+        ["277 N Lynnhaven road", "Suite 116", "Virginia Beach, VA 23452"]}, "phone":
+        "+17576203380", "display_phone": "(757) 620-3380", "distance": 2404.0115282906413},
+        {"id": "ldfekcGvqta1pete6YSf1Q", "alias": "nicos-tacos-virginia-beach", "name":
+        "Nico''s Tacos", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/L-rJHlyb_v8ZltgA15KkxQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/nicos-tacos-virginia-beach?adjust_creative=LQcpiiWbMiKa340WkEG_8A&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=LQcpiiWbMiKa340WkEG_8A",
+        "review_count": 222, "categories": [{"alias": "mexican", "title": "Mexican"}],
+        "rating": 4.5, "coordinates": {"latitude": 36.8168028885685, "longitude":
+        -76.1127119511366}, "transactions": ["delivery"], "price": "$$", "location":
+        {"address1": "3972 Holland Rd", "address2": "Ste 108", "address3": null, "city":
+        "Virginia Beach", "zip_code": "23452", "country": "US", "state": "VA", "display_address":
+        ["3972 Holland Rd", "Ste 108", "Virginia Beach, VA 23452"]}, "phone": "+17572275731",
+        "display_phone": "(757) 227-5731", "distance": 3865.5826989079405}, {"id":
+        "suumQlyr1Vd2LoRR1XogfA", "alias": "lumpia-and-company-virginia-beach", "name":
+        "Lumpia & Company", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/UUc21QNcDB7Eone9ouRy1w/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/lumpia-and-company-virginia-beach?adjust_creative=LQcpiiWbMiKa340WkEG_8A&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=LQcpiiWbMiKa340WkEG_8A",
+        "review_count": 178, "categories": [{"alias": "filipino", "title": "Filipino"}],
+        "rating": 4.5, "coordinates": {"latitude": 36.84208, "longitude": -76.0693299},
+        "transactions": ["delivery"], "price": "$", "location": {"address1": "228
+        N Lynnhaven Rd", "address2": "Ste 125", "address3": "", "city": "Virginia
+        Beach", "zip_code": "23452", "country": "US", "state": "VA", "display_address":
+        ["228 N Lynnhaven Rd", "Ste 125", "Virginia Beach, VA 23452"]}, "phone": "+17573060300",
+        "display_phone": "(757) 306-0300", "distance": 2624.887820086057}], "total":
+        2000, "region": {"center": {"longitude": -76.09748840332031, "latitude": 36.84936164735717}}}'
+  recorded_at: Wed, 21 Jul 2021 18:36:44 GMT
+recorded_with: VCR 6.0.0
