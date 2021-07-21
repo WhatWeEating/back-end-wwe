@@ -2,7 +2,7 @@ module Mutations
   class CreateRestaurants < Mutations::BaseMutation
     argument :params, Types::Input::RestaurantInputType, required: true
 
-    field :restaurant, Types::RestaurantType, null: false
+    field :restaurant, [Types::RestaurantType], null: false
     field :errors, [String], null: false
     # argument :event_id, String, required: true
 
@@ -17,8 +17,18 @@ module Mutations
       restaurant_params = Hash(params)
 
       event = Event.find_by(uid: restaurant_params[:first][:event_id])
-      restaurant_params.each do |k,v|
-        event.restaurants.create!(v)
+      restaurants = restaurant_params.map do |k,v|
+        event.restaurants.create(v)
+      end
+
+      if restaurants.present?
+        {
+          restaurant: restaurants,
+          error: []
+        } else {
+          restaurants: [],
+          errors: restaurant.errors.full_messages
+        }
       end
     end
     # def resolve(event_id: event_id, yelp_id: yelp_id, image: image, address: address, phone: phone, name: name)
