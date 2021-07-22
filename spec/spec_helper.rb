@@ -13,7 +13,7 @@
 # it.
 require 'simplecov'
 SimpleCov.start
-SimpleCov.add_filter ['spec', 'config', 'mailers', 'channels', 'jobs']
+SimpleCov.add_filter ['spec', 'config', 'mailers', 'channels', 'jobs', 'graphql/back_end_wwe_schema.rb', 'controllers/graphql_controller.rb']
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
