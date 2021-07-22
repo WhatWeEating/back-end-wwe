@@ -19,7 +19,7 @@ This repo houses **What We Eatin'?** Back-End. It has a combination of ReST API 
   - [Endpoints](#endpoints)
   - [Built With](#built-with)
   - [Versioning](#versioning)
-  - [Authors](#authors)
+  - [Credits](#credits)
 
 ## Getting Started
 
@@ -313,30 +313,70 @@ The following is a depiction of our Database Schema
 ## Built With
 - Ruby
 - Rails
-- GraphQL
-- RSpec
-- FactoryBot
-- Faker
+- GraphQL/GraphiQL
+- Fast JSON API
 
+| RSpec   |  Faker  |  VCR/Webmock |  Shoulda Matchers | SimpleCov | Orderly |
 
 ## Versioning
 - Ruby 2.5.3
 - Rails 5.2.6
 
-## Authors
-<!-- - **Ashish Malla**
-| [GitHub](https://github.com/asiisii) |
-  [LinkedIn](https://www.linkedin.com/in/adam-bowers-06a871209/) -->
-- **Diana Buffone**
-| [GitHub](https://github.com/Diana20920) |
-[LinkedIn](https://www.linkedin.com/in/dianabuffone/)
-- **Logan Anderson**
-| [GitHub](https://github.com/loganjacob76)
-<!-- - **Matt Craig**
-| [GitHub](https://github.com/mcraig2342) |
-- **Pat Findley**
-|  [GitHub](https://github.com/Patfindley) |
-    [LinkedIn](https://www.linkedin.com/in/patfindley/)
-- **Robert DeRouin**
-|    [GitHub](https://github.com/robertjosephderouin) |
-    [LinkedIn](https://www.linkedin.com/in/robert-derouin-7a2601173/) -->
+## Credits
+#### Front-End Team
+<table>
+  <tr>
+    <td> Ashish Malla <a href="https://github.com/asiisii">GH</td>
+    <td> Patrick Findley <a href="https://github.com/Patfindley">GH</td>
+    <td> Matt Craig <a href="https://github.com/mcraig2342">GH</td>
+  </tr>
+  <td>
+    <img src="https://avatars.githubusercontent.com/u/36644181?v=4" alt="Asiisii's GH img"
+  width="110" height="auto" />
+  </td>  
+  <td>
+    <img src="https://avatars.githubusercontent.com/u/74931778?v=4" alt="Pat's GH img"
+  width="110" height="auto" />
+  </td>
+  <td>
+    <img src="https://avatars.githubusercontent.com/u/75296592?v=4" alt="Matt's GH img"
+  width="110" height="auto" />
+  </td>  
+</table>
+
+#### Back-End Team
+<table>
+  <tr>
+    <td> Diana Buffone <a href="https://github.com/Diana20920">GH</td>
+    <td> Logan Anderson <a href="https://github.com/loganjacob76">GH</td>
+  </tr>
+  <td>
+    <img src="https://avatars.githubusercontent.com/u/71909590?v=4" alt="Diana's GH img"
+  width="110" height="auto" />
+  </td>  
+  <td>
+    <img src="https://avatars.githubusercontent.com/u/75458154?v=4" alt="Logan's GH img"
+  width="110" height="auto" />
+  </td>
+</table>
+
+#### Project Managers
+<table>
+  <tr>
+    <td> Leta Keane <a href="https://github.com/letakeane">GH</td>
+    <td> Robert Gu <a href="https://github.com/BobGu">GH</td>
+  </tr>
+  <td>
+    <img src="https://avatars.githubusercontent.com/u/22563791?v=4" alt="Leta's GH img"
+ width="110" height="auto" />
+ </td>
+  <td>
+    <img src="https://avatars.githubusercontent.com/u/4348166?v=4" alt="Bob's GH img"
+ width="110" height="auto" />
+ </td>
+</table>
+
+**************************************************************************
+This project was created for [Turing School of Software and Design](https://turing.io/)
+##### 2021/07/21
+**[Back to top](#table-of-contents)**
