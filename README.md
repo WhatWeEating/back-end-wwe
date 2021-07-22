@@ -1,17 +1,20 @@
-# What We Eating?
-## Back-End Repo
+# "What We Eating?" Back-End
 
 ## About this Project
-We are here to help you make that dreaded decision: Where are we eating?
-Simply provide your zip code and we will provide you a list of open restaurants.
-Pick your top 3 and send that to your friends or family to vote on. We will tally the rankings and show you the winning restaurant. Let's go eat!
+We are here to help you make that dreaded decision: **Where are we eating?**
+Provide your zip code and we will show you a list of open restaurants.
+Pick your top 3 and share them with your friends or family to get their 1st, 2nd, and 3rd choice. We will tally the rankings and show you all the winning restaurant. Let's go eat!
+
+
+This repo houses **What We Eatin'?** Back-End. It has a combination of ReST API and GraphQL API, both built with Ruby on Rails and PostgreSQL. It provides data from Yelp API and logic to a React Front-End.
+
 
 ## Table of Contents
 
   - [Getting Started](#getting-started)
-  - [Front-End Repo](#front-end-repos)
+  - [Front-End Repo](#front-end-repo)
   - [Running the tests](#running-the-tests)
-  - [Service Oriented Architecture](#service-oriented-architecture)
+  - [Architecture](#architecture)
   - [DB Schema](#db-schema)
   - [Endpoints](#endpoints)
   - [Built With](#built-with)
@@ -20,35 +23,50 @@ Pick your top 3 and send that to your friends or family to vote on. We will tall
 
 ## Getting Started
 
-To get the web application running, please fork and clone down the repo.
+To get your local/development environment running, please fork and clone down the repo:
+  ```shell
+  $ git clone git@github.com:WhatWeEating/back-end-wwe.git
+  ```
 
-## Other Repos
+## Front-End Repo
 
-- What We Eating? Front-End Application
-  - [Repo](https://github.com/WhatWeEating/front-end-wwe) | [Heroku]()
+-  You can find more information about the application at [GitHub Repo](https://github.com/WhatWeEating/front-end-wwe)
+- Visit the deployed application on [Heroku](https://mysterious-cove-94790.herokuapp.com/)
 
 ### Prerequisites
 
 To run this application you will need Ruby 2.5.3 and Rails 5.2.6
 
 ### Installing
+Once you have forked and cloned the repo:
+- Install the gem packages using [Bundler](https://bundler.io/)
+  ```shell
+  $ cd back-end-wwe
+  $ bundle install
+  ```
 
-- Install the gem packages  
-  `bundle install`
-
-- Create the database
-  `rails db{:drop, :create, :migrate}`
+- Start with a clean database
+  ```shell
+  $ rails db:{drop,create,migrate,seed}
+  ```
 
 ## Running the tests
 RSpec testing suite is utilized for testing this application.
-  `bundle exec rspec`
+- Run the test suite and access test coverage files
+  ```shell
+  $ bundle exec rspec
+  $ open coverage/index.html
+  ```
 
-## Service Oriented Architecture
-The following is a depiction of the overall service oriented architecture for this application which includes a JavaScript Front End application, a Rails Engine on the Back End that call out to Yelp's API.
+## Architecture
+The following is a depiction of the overall architecture for this application which includes a JavaScript Front-End application and a Rails Engine on the Back-End that calls out to Yelp's API.
+
+![](assets/README-3fa451ab.jpg)
 
 ## DB Schema
 The following is a depiction of our Database Schema
 
+![](assets/README-b48ee49d.jpg)
 
 ## Endpoints
 ### Search Open Restaurants by Zip Code
