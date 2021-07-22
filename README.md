@@ -69,19 +69,246 @@ The following is a depiction of our Database Schema
 ![](assets/README-b48ee49d.jpg)
 
 ## Endpoints
-### Search Open Restaurants by Zip Code
-`GET https://back-end-wwe.herokuapp.com/restaurants`
-- **Required** params:
-  - valid 5-digit zip code
-  - unique event ID
+### 1. Search Open Restaurants by Zip Code
+  `GET https://back-end-wwe.herokuapp.com/restaurants?zip=<5-digit-code>`
+  - **Required** params: valid 5-digit zip code
+  - **Required** headers: unique event ID
+  - **Limited** results: 15 restaurants
 
-<!-- Include example resquest and response here  -->
+<details>
+<summary>Example response (expand)</summary>
 
-### Query Winning Restaurant Details
-<!-- - **Required** query params:
-  - `location`
-  - `vintage` -->
-<!-- Include example resquest and response here  -->
+  ```json
+  {
+    "data": [
+        {
+            "id": "AKqb9TR9QdzJ1qdu8tkTzA",
+            "type": "restaurant",
+            "attributes": {
+                "name": "Hair of the Dog Eatery",
+                "image": "https://s3-media3.fl.yelpcdn.com/bphoto/gwaFPzFHysAIJ6e5YC2exQ/o.jpg",
+                "rating": 4.0,
+                "price": "$$",
+                "address": "4000 Virginia Beach Blvd, Ste 210, Virginia Beach, VA 23452",
+                "phone": "(757) 321-2200"
+            }
+        },
+        {
+            "id": "BfRDJuCXGJTYspHHgEN4zg",
+            "type": "restaurant",
+            "attributes": {
+                "name": "Mazari Kebab and More",
+                "image": "https://s3-media2.fl.yelpcdn.com/bphoto/O8HcqBaWHv_oHQ5U5wk6IA/o.jpg",
+                "rating": 4.5,
+                "price": "$$",
+                "address": "676 N Witchduck Rd, Virginia Beach, VA 23462",
+                "phone": "(757) 961-5968"
+            }
+        },
+        {
+            "id": "HH0O-DJNF34-SMmhKkK-AA",
+            "type": "restaurant",
+            "attributes": {
+                "name": "The Route 58 Delicatessen",
+                "image": "https://s3-media4.fl.yelpcdn.com/bphoto/SWhB05QOOBLuhk5Sw9uylw/o.jpg",
+                "rating": 4.5,
+                "price": "$$",
+                "address": "4000 Virginia Beach Blvd, Ste 156, Virginia Beach, VA 23462",
+                "phone": "(757) 227-5868"
+            }
+        }
+      ]
+    }
+  ```
+</details>
+
+### 2. Create Top 3 Restaurants Mutation
+`POST https://back-end-wwe.herokuapp.com/graphql`
+<details>
+<summary>Example query (expand)</summary>
+
+  ```
+  mutation {
+        createRestaurants(input: {
+          params: {
+            first: {
+              eventId: "1234500",
+              yelpId: "f00d1sLyf311",
+              image: "website",
+              address: "578 st",
+              phone: "125405648",
+              name: "Cuisine All"
+            },
+            second: {
+              eventId: "1234500",
+              yelpId: "Gr2bs00menOMNoms",
+              image: "webpage",
+              address: "3 ave",
+              phone: "458405648",
+              name: "All the Yums"
+            },
+            third:{
+              eventId: "1234500",
+              yelpId: "suPP0fd2D2y",
+              image: "imageaddress",
+              address: "5 st",
+              phone: "966405648",
+              name: "Nom Noms for Dayz"
+            }
+            }}) {
+      restaurant {
+        name
+        phone
+        address
+        votes
+      }
+    }
+  }
+  ```
+</details>
+
+<details>
+<summary>Example response (expand)</summary>
+
+```json
+{
+  "data": {
+    "createRestaurants": {
+      "restaurant": [
+        {
+          "name": "Cuisine All",
+          "phone": "125405648",
+          "address": "578 st",
+          "votes": 0
+        },
+        {
+          "name": "All the Yums",
+          "phone": "458405648",
+          "address": "3 ave",
+          "votes": 0
+        },
+        {
+          "name": "Nom Noms for Dayz",
+          "phone": "966405648",
+          "address": "5 st",
+          "votes": 0
+        }
+      ]
+    }
+  }
+}
+```
+</details>
+
+### 3. Update Votes for Top 3 Restaurants Mutation
+`POST https://back-end-wwe.herokuapp.com/graphql`
+<details>
+<summary>Example query (expand)</summary>
+
+  ```
+  mutation {
+   updateRestaurants(input: {
+    params: {
+      first: {
+        eventId: "1234500", yelpId: "f00d1sLyf311"
+      },
+      second: {
+        eventId: "1234500", yelpId: "Gr2bs00menOMNoms"
+      },
+      third: {
+        eventId: "1234500", yelpId: "suPP0fd2D2y"
+      }
+    }
+  }) {
+    restaurant {
+    	yelpId
+      votes
+      name
+    }
+  }
+}
+  ```
+</details>
+
+<details>
+<summary>Example response (expand)</summary>
+
+```json
+{
+  "data": {
+    "updateRestaurants": {
+      "restaurant": [
+        {
+          "yelpId": "f00d1sLyf311",
+          "votes": 3,
+          "name": "Cuisine All"
+        },
+        {
+          "yelpId": "Gr2bs00menOMNoms",
+          "votes": 2,
+          "name": "All the Yums"
+        },
+        {
+          "yelpId": "suPP0fd2D2y",
+          "votes": 1,
+          "name": "Nom Noms for Dayz"
+        }
+      ]
+    }
+  }
+}
+```
+</details>
+
+### 4. Fetch Event with Updated Votes Query
+`POST https://back-end-wwe.herokuapp.com/graphql`
+<details>
+<summary>Example query (expand)</summary>
+
+  ```
+  {
+  fetchEvent(uid: "1234500") {
+    uid
+    restaurants {
+      name
+      yelpId
+      votes
+    }
+  }
+}
+  ```
+</details>
+
+<details>
+<summary>Example response (expand)</summary>
+
+```json
+{
+  "data": {
+    "fetchEvent": {
+      "uid": "1234500",
+      "restaurants": [
+        {
+          "name": "Cuisine All",
+          "yelpId": "f00d1sLyf311",
+          "votes": 3
+        },
+        {
+          "name": "All the Yums",
+          "yelpId": "Gr2bs00menOMNoms",
+          "votes": 2
+        },
+        {
+          "name": "Nom Noms for Dayz",
+          "yelpId": "suPP0fd2D2y",
+          "votes": 1
+        }
+      ]
+    }
+  }
+}
+```
+</details>
 
 ## Built With
 - Ruby
