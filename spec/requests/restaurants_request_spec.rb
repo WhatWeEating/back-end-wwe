@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Fetch Open Restaurants by Zip', :vcr do
   describe 'Happy Path' do
+    let(:lat_lon) { "36.830360,-76.122750" }
     it 'endpoint exists and returns array of restaurants' do
       zip = 22304
 
@@ -51,6 +52,23 @@ RSpec.describe 'Fetch Open Restaurants by Zip', :vcr do
       expect(response).to be_successful
       expect(event.uid).to eq(headers[:HTTP_EVENT_ID])
     end
+
+    it 'can detect latitute and longitude' do
+      get "/restaurants?zip=#{lat_lon}"
+
+      expect(response).to be_successful
+
+      body = JSON.parse(response.body, symbolize_names: true)
+
+      expect(body).to have_key(:data)
+      data = body[:data]
+      expect(data).to be_an(Array)
+
+      object = data[0]
+
+      expect(object.keys.size).to eq(3)
+      expect(object[:attributes].size).to eq(6)
+    end
   end
 
   describe 'Sad Path' do
@@ -66,7 +84,7 @@ RSpec.describe 'Fetch Open Restaurants by Zip', :vcr do
       expect(response.status).to eq(400)
     end
 
-    it 'zip must be a string of 5 numbers' do
+    xit 'zip must be a string of 5 numbers' do
       get "/restaurants?zip=ck-23-1"
 
       body = JSON.parse(response.body, symbolize_names: true)

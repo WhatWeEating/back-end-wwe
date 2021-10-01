@@ -71,7 +71,7 @@ The following is a depiction of our Database Schema
 ## Endpoints
 ### 1. Search Open Restaurants by Zip Code
   `GET https://back-end-wwe.herokuapp.com/restaurants?zip=<5-digit-code>`
-  - **Required** params: valid 5-digit zip code
+  - **Required** params: valid 5-digit zip code/latitude and longitude
   - **Required** headers: unique event ID
   - **Limited** results: 15 restaurants
 
