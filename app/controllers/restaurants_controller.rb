@@ -17,10 +17,14 @@ class RestaurantsController < ApplicationController
 
   def valid?
     zip = params[:zip]
-
-    return true if zip.present? &&
-      zip.length == 5 &&
-      zip.to_i > 0
-    invalid_params
+    if zip.present?
+      if zip.split(',') == Array && zip.split(',').count == 2
+        return true
+      elsif zip.length == 5 && zip.to_i > 0
+        return true
+      end
+    else
+      invalid_params
+    end
   end
 end
